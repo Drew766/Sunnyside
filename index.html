@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Fraunces:opsz@9..144&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.svg" alt="logo">
+            </div>
+            <ul class="navLinks">
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Projects</a></li>
+                <li><button type="button" class="contactMe">CONTACT</button></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="container1">
+        <h1>WE ARE CREATIVES</h1>
+        <img src="images/icon-arrow-down.svg" id="downArrow" alt="">
+    </div>
+    <div id="container2" class="containers">
+        <div id="cont2Text" class="textContainer">
+            <div class="textCont">
+                <h2>Transform your brand</h2>
+                <p id="div1P" class="textContP">We are a full-service agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
+                <a href="#" id="learn1" class="learnMore">Learn more</a>
+            </div>
+        </div>
+        <img src="images/desktop/image-transform.jpg" class="contImg" alt="egg">
+    </div>
+    <div id="container3" class="containers">
+        <img src="images/desktop/image-stand-out.jpg" class="contImg" alt="">
+        <div id="cont3Text" class="textContainer">
+            <div class="textCont">
+                <h2>Stand out to the right audience</h2>
+                <p id="cont3P" class="textContP">Using a collaborative formula of designers, researcher, photographers, videographers, and copywriters, we'll build and extend your brand in digital spaces.</p>
+                <a href="#" id="learn2" class="learnMore">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <div id="container4" class="containers">
+        <div id="cont4Div1" class="cont4Divs">
+            <div class="cont4Text" id="cont4Text1">
+                <h3>Graphic Design</h3>
+                <p class="cont4P">
+                    Great design makes you memorable. We deliver artwork that underscores your brand message and potential clients' attention.
+                </p>
+            </div>
+        </div>
+        <div id="cont4Div2" class="cont4Divs">
+            <div class="cont4Text" id="cont4Text2">
+                <h3>Photography</h3>
+                <p class="cont4P">
+                    Increase your credibility by getting the most stunning high quality photos that improve your business image.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="testimonials">
+        <h4>CLIENT TESTIMONIALS</h4>
+        <div id="testCont">
+            <div class="testimony">
+                <img src="images/image-emily.jpg" class="testImg" alt="image-emily">
+                <p class="testP">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+                <div class="testFoot">
+                    <h5 class="nam">Emily R.</h5>
+                    <p class="name">Marketing director</p>
+                </div>
+            </div>
+            <div class="testimony">
+                <img src="images/image-thomas.jpg" class="testImg" alt="image-thomas">
+                <p class="testP">Sunnyside enthusiasm coupled with their keen interest in our brand's success made a satisfying and enjoyable experience.</p>
+                <div class="testFoot">
+                    <h5 class="nam">Thomas S.</h5>
+                    <p class="name"> Chief Operating Officer</p>
+                </div>
+            </div>
+            <div class="testimony">
+                <img src="images/image-jennie.jpg" class="testImg" alt="image-emily">
+                <p class="testP">Incredible end result! Our sells increased by 400% when we worked with Sunnyside. Highly recommended.</p>
+                <div class="testFoot">
+                    <h5 class="nam">Jennie F.</h5>
+                    <p class="name"> Marketing director</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container5">
+        <img src="images/desktop/image-gallery-milkbottles.jpg" class="cont5Img" alt="milk bottles">
+        <img src="images/desktop/image-gallery-orange.jpg" class="cont5Img" alt="oreange">
+        <img src="images/desktop/image-gallery-cone.jpg" class="cont5Img" alt="cone">
+        <img src="images/desktop/image-gallery-sugarcubes.jpg" class="cont5Img" alt="sugercubes">
+    </div>
+    <footer id="footer">
+       <div class="footDiv">
+        <img src="images/logo.svg" alt="">
+        <div id="footerLinks">
+            <a href="#" class="footLink">About</a>
+            <a href="#" class="footLink">Services</a>
+            <a href="#" class="footLink">Projects</a>
+        </div>
+       </div>
+        <div id="socialMedia">
+            <a href="#" class="linkImg">
+                <img src="images/icon-facebook.svg" alt="facebook">
+            </a>
+            <a href="#" class="linkImg">
+                <img src="images/icon-instagram.svg" alt="instagram">
+            </a>
+            <a href="#" class="linkImg">
+                <img src="images/icon-twitter.svg" alt="twitter">
+            </a>
+            <a href="#" class="linkImg">
+                <img src="images/icon-pinterest.svg" alt="pinterest">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.navLinks');
+            const navLinks = document.querySelectorAll('.navLinks li');
+
+            burger.addEventListener('click', ()=> {
+                nav.classList.toggle('nav-active');
+
+                burger.classList.toggle('toogle');
+
+                navLinks.forEach((link,index) => {
+                link.style.animation = `navLinkFade 0.5s ease forwards $(index /7 + 0.3)s`;
+                console.log(index/7);
+            });
+            });
+            
+        }
+
+        navSlide();
+    </script>
+</body>
+</html>
